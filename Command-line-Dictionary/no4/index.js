@@ -1,7 +1,7 @@
 const readline = require('readline');
 const https = require('https');
 
-const api_key = 'YOUR_API_KEY'; // replace with your own API key
+const api_key = '4ee6d020-710d-4c37-9be9-60c7e4abd6cc'; // replace with your own API key
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -10,9 +10,8 @@ const rl = readline.createInterface({
 
 rl.question('Enter a word: ', (word) => {
   const options = {
-    hostname: 'od-api.oxforddictionaries.com',
-    port: 443,
-    path: `/api/v2/entries/en/${word}`,
+    hostname: 'dictionaryapi.com',
+    path: `/api/v3/references/thesaurus/json/${word}`,
     method: 'GET',
     headers: {
       'app_id': 'YOUR_APP_ID', // replace with your own app ID
